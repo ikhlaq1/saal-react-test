@@ -1,6 +1,5 @@
 import React from "react";
 import { convertDate } from "../../utils/DateConverter";
-
 import "./styles.css";
 
 export default function UserDetailsModal({ show, userDetails, onHide }) {
