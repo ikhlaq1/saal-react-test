@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-       {/* Implemented Error boundary to show Fallback UI if anything goes wrong */}
+      {/* Implemented Error boundary to show Fallback UI if anything goes wrong */}
       <ErrorBoundary>
         {/* Wrapping app in context provider and setting value of context */}
         <UsersContext.Provider value={contextValue}>
@@ -68,7 +68,7 @@ function App() {
               <SearchBox />
               <UserList />
               {/* Hiding pagination component if user is searching  */}
-              {searchText == "" && <Pagination />}
+              {searchText === "" && <Pagination />}
             </>
           )}
         </UsersContext.Provider>

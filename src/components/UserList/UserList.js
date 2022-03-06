@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+import { Table, Thead, Tbody, Tr, Th } from "react-super-responsive-table";
 import { DISPLAYED_USERS } from "../../Constants/Constants";
 import UsersContext from "../../context/UsersContext";
 import UserDetailsModal from "../../Modals/UserDetails/UserDetailsModal";
 import LightBox from "../LightBox/Lightbox";
 import User from "../User/User";
 import "./styles.css";
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+
 export default function UserList() {
   //getting all users , current page number and search text from context
 
@@ -61,7 +62,7 @@ export default function UserList() {
 
           {currentDisplayedUsers &&
           currentDisplayedUsers &&
-          searchText == "" ? (
+          searchText === "" ? (
             currentDisplayedUsers.map((user) => (
               <User
                 key={user.login.uuid}
@@ -76,7 +77,7 @@ export default function UserList() {
               {users &&
                 users
                   .filter((filteredUser) => {
-                    if (searchText == "") {
+                    if (searchText === "") {
                       return filteredUser;
                     } else if (
                       filteredUser.login.username

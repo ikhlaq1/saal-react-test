@@ -10,7 +10,7 @@ const LightBox = ({ image, hideLightBox }) => {
         hideLightBox(false);
       }}
     >
-      <img className="userImage" src={image} />
+      <img className="userImage" src={image} alt="user-full" />
     </div>
   );
 };

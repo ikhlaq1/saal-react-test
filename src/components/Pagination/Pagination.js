@@ -14,13 +14,13 @@ const Pagination = () => {
     <div className="pagination">
       {/* displaying all page numbers and setting current page number as active */}
       {pages.map((pageNo, index) => (
-        <a
+        <button
           key={index}
-          className={page == pageNo ? "active" : ""}
+          className={page === pageNo ? "active" : ""}
           onClick={() => changePageNumber(pageNo)}
         >
           {pageNo}
-        </a>
+        </button>
       ))}
     </div>
   );
